@@ -1,0 +1,30 @@
+theme = "dan"
+
+[editor]
+cursorline = true
+end-of-line-diagnostics = "hint"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[keys.normal]
+D = "kill_to_line_end"
+C-t = ":config-reload"
+g = { C = ":open C:\\Users\\dan.piponi\\AppData\\Roaming\\Helix",  h = "@\"%P\"fyu:new<ret>\"fPs\\.cpp<ret>c.h<esc><home>gf<C-o>:bc!<ret>", c = "@\"%P\"fyu:new<ret>\"fPs\\.h<ret>c.cpp<esc><home>gf<C-o>:bc!<ret>" }
+"C-home" = "goto_file_start"
+"C-end" = "goto_file_end"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
+
+[editor.statusline]
+left = ["mode", "spinner", "separator"]
+center = ["file-name", "read-only-indicator"]
+right = ["separator", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type", "separator", "workspace-diagnostics"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]

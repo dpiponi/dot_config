@@ -1,0 +1,159 @@
+# Ultimately have a spectrum where
+# Language syntax is more red
+# type stuff is yellow
+# terms are greenish
+
+attribute_color = "attribute_color"
+
+# from, import
+keyword = "#ff8040"
+"keyword.directive" = "#a0c0b0"
+
+# module names
+namespace = "#e0e080"
+
+# parens
+punctuation = "#ffffff"
+"punctuation.delimiter" = "#c0b060"
+
+# +, -, *, . etc.
+operator = "#a0d080"
+
+# don't know
+special = "label"
+
+# members, eg. xxx in a.xxx
+"variable.other.member" = "#ffff00"
+
+variable = "#d0ffa0"
+
+# function arguments and their uses
+"variable.parameter" = { fg = "#e0f0a0" }
+
+# self
+"variable.builtin" = {fg = "#a0b040", modifiers=["bold","italic"]}
+
+type = "#ffff90"
+
+# float
+"type.builtin" = "#f0c090"
+
+# __init__
+constructor = "#f0ffc0"
+
+function = "#d0ffa0"
+"function.macro" = {fg ="light_blue" }
+
+# len()
+"function.builtin" = "#a0ffe0"
+
+tag = "tag"
+comment = { fg = "#a0a080", modifiers = ["italic"] }
+constant = {fg ="#afff70"}
+"constant.builtin" = "#f0a030"
+string = {fg="#d0b030", modifiers=["italic"]}
+"constant.numeric" = "#ffc09f"
+"constant.character.escape" = "label"
+
+# used for lifetimes
+label = "label"
+
+"markup.heading" = "light_blue"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "link_url_foreground_color", modifiers = ["underlined"] }
+"markup.link.text" = "markup_link_foreground_color"
+"markup.raw" = "markup_raw_foreground_color"
+
+"diff.plus" = "#35bf86"
+"diff.minus" = "#f22c86"
+"diff.delta" = "info"
+
+"ui.background" = { bg = "#101000" }
+"ui.background.separator" = { fg = "window_color" }
+"ui.linenr" = { fg = "window_color" }
+"ui.linenr.selected" = { fg = "light_blue" }
+"ui.statusline" = { fg = "#ffffff", bg = "#90a070" }
+"ui.statusline.inactive" = { fg = "#d0efd0", bg = "#407020" }
+"ui.virtual.ruler" = { bg = "dark"}
+
+"ui.popup" = {  fg = "menu_normal_text_color", bg = "menu_background_color"  }
+"ui.window" = { fg = "dark"}
+"ui.help" = {  fg = "menu_normal_text_color", bg = "menu_background_color"  }
+
+"ui.text" = { fg = "text" }
+"ui.text.focus" = { fg = "white" }
+"ui.text.inactive" = "comment_color"
+"ui.virtual" = { fg = "#008DFF" }
+
+"ui.virtual.indent-guide" = { fg = "window_color" }
+
+"ui.selection" = { bg = "#4f46e5" }
+"ui.selection.primary" = { bg = "#4f46e5" }
+
+"ui.cursor" = { bg = "#ffdfbf", fg = "#000000" }
+"ui.cursor.select" = { bg = "cursor_normal_bg_color" }
+"ui.cursor.primary.insert" = { bg = "#f43f5e", fg = "white" }
+
+# matching parens etc.
+"ui.cursor.match" = { fg = "#212121", bg = "#9C6999" }
+
+# current line
+"ui.cursorline.primary" = { bg = "#503020"}
+
+"ui.highlight" = { bg = "#103020" }
+"ui.highlight.frameline" = { bg = "#634450" }
+"ui.debug" = { fg = "#634450" }
+"ui.debug.breakpoint" = { fg = "debug_breakpoint" }
+"ui.menu" = { fg = "menu_normal_text_color", bg = "menu_background_color" }
+"ui.menu.selected" = { fg = "menu_background_color", bg = "#f00000" }
+"ui.menu.scroll" = { fg = "menu_scroll", bg = "window_color" }
+
+"diagnostic.hint" = { underline = { color = "hint", style = "curl" } }
+"diagnostic.info" = { underline = { color = "info", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
+"diagnostic.error" = { underline = { color = "error", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+warning = {bg="#404040",fg="#f0f000"}
+error = {fg="#ff0000"}
+info = {fg="#ff8f00", modifiers = ["italic", "bright"]}
+hint = "#38bdf8"
+
+[palette]
+label = "#efba5d"
+constant_numeric_foreground_color = "#E8DCA0"
+tag = "#eccdba"
+markup_link_foreground_color = "#eccdba"
+markup_raw_foreground_color = "#eccdba"
+keyword_foreground_color="#eccdba" # alternative color "#ecc1ba"
+comment_color = "#697C81"
+link_url_foreground_color="#b8b8b8"
+debug_breakpoint = "#f47868"
+window_color = "#484a4d"
+light_blue = "#bee0ec" #change name
+text = "#bfdbfe"
+black = "#000000"
+white = "#ffffff"
+dark= "#111111"
+punctuation_color = "#a4a0e8"
+string="#6ee7b7"
+attribute_color="#dbbfef"
+operator_color="#bee0ec"
+menu_background_color="#1e3a8a"
+menu_normal_text_color="#93c5fd"
+statusline_active_background_color="#202020"
+statusline_inactive_background_color="#0e0e0e"
+statusline_inactive_foreground_color="#b8b8b8"
+popup_background_color="#1e3a8a"
+cursor_normal_bg_color="#6366f1"
+warning="#ffcd1c"
+error = "#f43f5e"
+hint = "#38bdf8"
+info = "#6366f1"
+variable="#c7d2fe"
+menu_scroll="#93c5fd"
+built_in="#10b981"
+statusline_foreground_color="#6366f1"
