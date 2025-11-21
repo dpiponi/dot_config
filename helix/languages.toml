@@ -1,0 +1,49 @@
+# ---------- Language servers ----------
+[language-server.clangd]
+# If clangd.exe is on PATH, keep just "clangd". Otherwise, give the full path.
+command = "c:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\Llvm\\x64\\bin\\clangd.exe"
+# Example: command = "C:\\Program Files\\LLVM\\bin\\clangd.exe"
+# Optional: pass flags directly to clangd
+# config = { "clangd.fallbackFlags" = ["-std=c++20"] }
+
+# ---------- C ----------
+[[language]]
+name = "c"
+language-servers = ["clangd"]
+# Optional quality-of-life
+roots = ["compile_commands.json", ".git"]
+# indent = { tab-width = 4, unit = "    " }
+
+# Debugger (LLDB DAP)
+[language.debugger]
+name = "lldb-dap"
+transport = "stdio"
+# Point this to your lldb-dap.exe if it isn't on PATH
+command = "c:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\Llvm\\x64\\bin\\lldb-dap.exe"
+# Launch template: choose a binary and run it
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+completion = [ { name = "binary", completion = "filename" } ]
+[language.debugger.templates.args]
+program = "{0}"
+
+# ---------- C++ ----------
+[[language]]
+name = "cpp"
+language-servers = ["clangd"]
+roots = ["compile_commands.json", ".git"]
+# indent = { tab-width = 4, unit = "    " }
+
+# Reuse the same debugger settings for C++
+[language.debugger]
+name = "lldb-dap"
+transport = "stdio"
+command = "c:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\Llvm\\x64\\bin\\lldb-dap.exe"
+
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+completion = [ { name = "binary", completion = "filename" } ]
+[language.debugger.templates.args]
+program = "{0}"
